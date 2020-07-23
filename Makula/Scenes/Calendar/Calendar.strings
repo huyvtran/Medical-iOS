@@ -1,0 +1,31 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Kalender";
+
+// The week names for the WeekNamesView.
+"WeekNameMonday" = "MO";
+"WeekNameTuesday" = "DI";
+"WeekNameWednesday" = "MI";
+"WeekNameThursday" = "DO";
+"WeekNameFriday" = "FR";
+"WeekNameSaturday" = "SA";
+"WeekNameSunday" = "SO";
+
+// The month names.
+"MonthJanuary" = "Januar";
+"MonthFebruary" = "Februar";
+"MonthMarch" = "März";
+"MonthApril" = "April";
+"MonthMay" = "Mai";
+"MonthJune" = "Juni";
+"MonthJuly" = "Juli";
+"MonthAugust" = "August";
+"MonthSeptember" = "September";
+"MonthOctober" = "Oktober";
+"MonthNovember" = "November";
+"MonthDecember" = "Dezember";
+
+// The format of the day numbers.
+"DayNumberFormat" = "%02d";
+"MonthTitleFormat" = "%@ %@";

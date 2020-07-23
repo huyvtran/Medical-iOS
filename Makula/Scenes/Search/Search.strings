@@ -1,0 +1,7 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Suchfunktion";
+
+// The placeholder text for the search cell.
+"SearchInputCellTextFieldPlaceholder" = "Suchwort";

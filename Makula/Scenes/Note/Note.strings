@@ -1,0 +1,7 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Notizen";
+
+// The place holder string.
+"PlaceholderText" = "Geben Sie hier Ihren Text ein.";

@@ -1,0 +1,9 @@
+// The scene's localized text.
+
+// The scene's title.
+"Title" = "Amslertest";
+
+// The cell titles.
+"TextCellTitle" = "Verzerrungen";
+"SplitCellTitleLeft" = "links";
+"SplitCellTitleRight" = "rechts";

@@ -1,0 +1,7 @@
+// The scene's localized text.
+
+// The scene's title.
+"Title" = "Termin-Eingabe";
+
+// The save button title.
+"SaveButtonTitle" = "Speichern";

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dUw-bK-nDq" customClass="SplitRadioCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="20" width="375" height="73"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-Nh-1Gx" customClass="SplitRadioCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="101" width="375" height="177"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="ibTitle" value="A very very long title which should not fit in one line."/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wj0-RL-Yv3" customClass="SplitRadioCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="286" width="375" height="114"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzb-in-CBj" customClass="SplitRadioCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="408" width="375" height="73"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLeftSelected" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibRightSelected" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kbJ-fo-vdz" customClass="SplitRadioCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="489" width="375" height="114"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLeftSelected" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibRightSelected" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="kbJ-fo-vdz" secondAttribute="trailing" id="64S-0U-bt7"/>
+                <constraint firstItem="CaC-Nh-1Gx" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="DIm-fs-ys7"/>
+                <constraint firstItem="kbJ-fo-vdz" firstAttribute="top" secondItem="Jzb-in-CBj" secondAttribute="bottom" constant="8" id="EWW-9A-kvS"/>
+                <constraint firstItem="kbJ-fo-vdz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="P72-E4-s1Q"/>
+                <constraint firstItem="dUw-bK-nDq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RUi-qT-nT9"/>
+                <constraint firstItem="Wj0-RL-Yv3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="VS9-jC-JAg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Jzb-in-CBj" secondAttribute="trailing" id="WfL-f2-kbK"/>
+                <constraint firstItem="dUw-bK-nDq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Wzi-ch-wna"/>
+                <constraint firstItem="CaC-Nh-1Gx" firstAttribute="top" secondItem="dUw-bK-nDq" secondAttribute="bottom" constant="8" id="aAj-uM-87h"/>
+                <constraint firstItem="Jzb-in-CBj" firstAttribute="top" secondItem="Wj0-RL-Yv3" secondAttribute="bottom" constant="8" id="abD-Ch-6ph"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dUw-bK-nDq" secondAttribute="trailing" id="bgo-TG-Pke"/>
+                <constraint firstItem="Wj0-RL-Yv3" firstAttribute="top" secondItem="CaC-Nh-1Gx" secondAttribute="bottom" constant="8" id="ixB-qK-ESf"/>
+                <constraint firstItem="CaC-Nh-1Gx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="rK9-bJ-o4m"/>
+                <constraint firstItem="Jzb-in-CBj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tLi-xO-So4"/>
+                <constraint firstItem="Wj0-RL-Yv3" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="zfH-6L-Pc1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>

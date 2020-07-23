@@ -1,0 +1,16 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Diagnose";
+
+// The cell titles.
+"CellTitleAmd" = "Altersabhängige Makuladegeneration";
+"CellTitleDmo" = "Diabetisches Makulaödem";
+"CellTitleRvv" = "Retinaler Venenverschluss";
+"CellTitleMcnv" = "Myope choroidale Neovaskularisation";
+
+// The cell sub titles.
+"SubTitleAmd" = "(AMD)";
+"SubTitleDmo" = "(DMÖ)";
+"SubTitleRvv" = "(RVV)";
+"SubTitleMcnv" = "(mCNV)";

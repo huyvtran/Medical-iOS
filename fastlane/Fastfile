@@ -1,0 +1,404 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# Change the syntax highlighting to Ruby
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Automatically update fastlane
+update_fastlane
+
+# Constants
+# All devices to run the UI tests on. Specific devices to cover some edge cases. 
+# iPhone 5 doesn't support UI testing at all.
+# The iPhone simulator with iOS 10 doesn't support landscape (might not be true anymore due to a fixed bug in the app itself).
+UI_TEST_DEVICES = ["iPhone 7", "iPhone 7 Plus", "iPhone X", "iPhone 5s", "iPad Air (10.3.1)", "iPad Pro (12.9-inch) (2nd generation)"]
+# The devices to use for Unit testing. We use any modern device, main thing, all iOS versions are covered and both, @2x and @3x.
+UNIT_TEST_DEVICES = ["iPhone 7", "iPhone 7 (10.3.1)", "iPhone 7 Plus"]
+# The development device target for doing local tests.
+DEVELOPMENT_DEVICE = "iPhone 7"
+# The folder name of the snapshot references.
+SNAPSHOT_REFERENCE_FOLDER = "SnapshotReferenceImages"
+
+default_platform(:ios)
+platform :ios do
+	before_all do
+		# Disable usage tracking
+		opt_out_usage
+
+		# The Slack WebHook to the indie-software appamedix_ci channel
+		ENV["SLACK_URL"] = "https://hooks.slack.com/services/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"
+	end
+
+	# createSnapshots
+
+	desc "Runs the UI and Unit tests ignoring the test failures just to create local non device agnostic screenshot."
+	desc "Enforces creating all snapshots by automatically overriding the record flag."
+	desc "This is the manual counterpart to the CI lane 'createUITestSnapshots'."
+	lane :createLocalSnapshots do
+		deleteSnapshots
+		createUnitTestImages
+		createUITestImages
+	end
+	
+	desc "Deletes the snapshot reference images folder."
+	lane :deleteSnapshots do
+		sh("rm -rf \"../#{SNAPSHOT_REFERENCE_FOLDER}\"")
+	end
+	
+	desc "Runs the Unit tests ignoring the test failures just to create local screenshot."
+	desc "Enforces creating all snapshots by automatically overriding the record flag."
+	lane :createUnitTestImages do
+	   	# Run the Unit tests for creating view snapshots, run each device separate to prevent interferences.
+		begin
+			scan(
+				scheme: "MakulaUnitTests",		# The Unit tests scheme
+				clean: true,					# Clean project first
+				device: DEVELOPMENT_DEVICE,		# The device to test on
+				skip_slack: true,				# Don't report back on slack
+				xcargs: "OTHER_SWIFT_FLAGS='$(inherited) -DCREATE_SNAPSHOTS'" # Enforce record mode
+			)
+	    rescue => ex
+    		# When creating snapshots the tests fail, but we don't care
+   			puts ex
+	    end
+	end
+	
+	desc "Runs the UI tests ignoring the test failures just to create local screenshot."
+	desc "Enforces creating all snapshots by automatically overriding the record flag."
+	lane :createUITestImages do
+	   	# Run the snapshot tests, run each device separate otherwise they would interfere with each other
+		begin
+			scan(
+				scheme: "MakulaUITests",		# The UI tests scheme
+				clean: true,					# Clean project first
+				device: DEVELOPMENT_DEVICE,		# The device to test on
+				skip_slack: true,				# Don't report back on slack
+				xcargs: "OTHER_SWIFT_FLAGS='$(inherited) -DCREATE_SNAPSHOTS'" # Enforce record mode
+			)
+	    rescue => ex
+    		# When creating snapshots the tests fail, but we don't care
+   		   	puts ex
+	    end
+	end
+
+	desc "Runs the UI and Unit tests ignoring the test failures just to create screenshot and pushing them to origin."
+	desc "Enforces creating all snapshots by automatically overriding the record and deviceAgnostic flag."
+	desc "CI lane, changes the project's signing."
+	lane :createUITestSnapshots do
+		# Inform about lane start
+		slack(
+			message: "Creating snapshots",
+			default_payloads: [:lane, :git_branch, :git_author, :last_git_commit_hash]
+		)
+
+		# Switch from automatic to manual signing
+		disable_automatic_code_signing(
+			code_sign_identity: "iPhone Developer: Sven Korset",
+			profile_name: "Wildcard Profile",
+			team_id: "H6T8HJZGHY"
+		)
+
+		# Delete snapshot folder
+		deleteSnapshots
+		
+		# Run the Unit tests for the development device.
+		scan(
+			scheme: "MakulaUnitTests",		# The Unit tests scheme
+			clean: true,					# Clean project first
+			device: DEVELOPMENT_DEVICE,		# The device to test on
+			skip_slack: true,				# Don't report back on slack
+			# Enforce record mode
+			xcargs: "OTHER_SWIFT_FLAGS='$(inherited) -DCREATE_SNAPSHOTS'"
+		)
+
+	   	# Run the Unit tests for creating view snapshots, run each device separate to prevent interferences.
+		UNIT_TEST_DEVICES.each do |device|
+			begin
+				scan(
+					scheme: "MakulaUnitTests",		# The Unit tests scheme
+					clean: false,					# Don't clean project
+					device: device,					# The device to test on
+					skip_slack: true,				# Don't report back on slack
+					# Enforce record mode
+					xcargs: "OTHER_SWIFT_FLAGS='$(inherited) -DCREATE_SNAPSHOTS -DDEVICE_AGNOSTIC_SCREENSHOTS'"
+				)
+		    rescue => ex
+	    		# When creating snapshots the tests fail, but we don't care
+    			puts ex
+		    end
+	    end
+
+		# Run the UI tests for the development device.
+		scan(
+			scheme: "MakulaUITests",		# The UI tests scheme
+			clean: true,					# Clean project first
+			device: DEVELOPMENT_DEVICE,		# The device to test on
+			skip_slack: true,				# Don't report back on slack
+			# Enforce record mode
+			xcargs: "OTHER_SWIFT_FLAGS='$(inherited) -DCREATE_SNAPSHOTS'"
+		)
+
+	   	# Run the snapshot tests, run each device separate otherwise they would interfere with each other
+		UI_TEST_DEVICES.each do |device|
+			begin
+				scan(
+					scheme: "MakulaUITests",		# The UI tests scheme
+					clean: false,					# Don't clean project
+					device: device,					# The device to test on
+					skip_slack: true,				# Don't report back on slack
+					# Enforce record mode
+					xcargs: "OTHER_SWIFT_FLAGS='$(inherited) -DCREATE_SNAPSHOTS -DDEVICE_AGNOSTIC_SCREENSHOTS'"
+				)
+		    rescue => ex
+	    		# When creating snapshots the tests fail, but we don't care
+    		   	puts ex
+		    end
+	    end
+	    
+	    # Commit any changes to the UI test reference images
+		begin
+			git_add(
+	    		path: "#{SNAPSHOT_REFERENCE_FOLDER}/*",
+			)
+	    	git_commit(
+	    		path: "#{SNAPSHOT_REFERENCE_FOLDER}/*",
+		    	message: "Updated UI test reference images [ci skip]"
+		    )
+	    	push_to_git_remote
+
+			# Report back on slack
+			slack(
+				message: "Snapshot creation finished",
+				default_payloads: [:lane, :git_branch, :git_author, :last_git_commit_hash]
+			)
+		rescue => ex
+	    	# Commit or push failed, maybe because nothing has changed
+	    	puts ex
+			slack(
+				message: "Snapshot creation failed, maybe nothing has changed?",
+				default_payloads: [:lane, :git_branch, :git_author, :last_git_commit_hash],
+				success: true
+			)
+		end
+	end
+	
+	# build and test
+
+	desc "Posts a slack message to inform about start of the build and test pipeline."
+	lane :startTestsInfo do	
+		# Inform about start with detailed infos in payload
+		slack(
+			message: "Starting build & tests",
+			default_payloads: [:git_branch, :git_author, :last_git_commit_hash]
+		)
+	end
+	
+	desc "Builds the Makula target for debug and release."
+	desc "CI lane, changes the project's signing."
+	lane :build do
+		# Post Slack message
+		slack(message: "Building debug.", default_payloads: [])
+
+		# Switch from automatic to manual signing
+		disable_automatic_code_signing(
+			code_sign_identity: "iPhone Developer: Sven Korset",
+			profile_name: "Wildcard Profile",
+			team_id: "H6T8HJZGHY"
+		)
+
+		# Build the default target in debug mode
+		gym(
+			scheme: "Makula",				# The default scheme
+			clean: true,					# Clean project first
+			configuration: "Debug",			# Build for debug
+			silent: true,					# No details
+			skip_package_ipa: true			# ipa not necessary
+		)
+
+		# Post Slack message
+		slack(message: "Building release.", default_payloads: [])
+
+		# Switch from automatic to manual signing
+		disable_automatic_code_signing(
+			code_sign_identity: "iPhone Distribution: Johannes Vegt (47M3HS62YX)",
+			profile_name: "Makula dist",
+			team_id: "47M3HS62YX"
+		)
+
+		# Build the default target in release mode
+		gym(
+			scheme: "MakulaRelease",		# The default scheme
+			clean: true,					# Clean project first
+			configuration: "Release",		# Build for release
+			silent: true,					# No details
+			skip_package_ipa: true			# ipa not necessary
+		)
+	end
+	
+	desc "Runs the Unit tests in the simulator."
+	desc "CI lane, changes the project's signing."
+	lane :unitTests do
+		# Switch from automatic to manual signing
+		disable_automatic_code_signing(
+			code_sign_identity: "iPhone Developer: Sven Korset",
+			profile_name: "Wildcard Profile",
+			team_id: "H6T8HJZGHY"
+		)
+
+		# Post Slack message
+		slack(message: "Unit testing.", default_payloads: [])
+
+		# Run the Unit tests for the development device
+		scan(
+			scheme: "MakulaUnitTests",		# The Unit tests scheme
+			clean: true,					# Clean project first
+			device: DEVELOPMENT_DEVICE,		# The device to test on
+			slack_message: "Unit Test: " + DEVELOPMENT_DEVICE # Report device
+		)
+	end
+	
+	desc "Runs the UI tests in the simulator."
+	desc "CI lane, changes the project's signing."
+	lane :uiTests do
+		# Switch from automatic to manual signing
+		disable_automatic_code_signing(
+			code_sign_identity: "iPhone Developer: Sven Korset",
+			profile_name: "Wildcard Profile",
+			team_id: "H6T8HJZGHY"
+		)
+
+		# Post Slack message
+		slack(message: "UI testing.", default_payloads: [])
+
+		# Run the UI tests for the development device
+		scan(
+			scheme: "MakulaUITests",		# The UI tests scheme
+			clean: true,					# Clean project first
+			device: DEVELOPMENT_DEVICE,		# The device to test on
+			slack_message: "UI Test: " + DEVELOPMENT_DEVICE # Report device
+		)
+	end
+	
+	desc "Lints the project."
+	desc "CI lane, changes the project's signing."
+	lane :lint do
+		# Switch from automatic to manual signing
+		disable_automatic_code_signing(
+			code_sign_identity: "iPhone Developer: Sven Korset",
+			profile_name: "Wildcard Profile",
+			team_id: "H6T8HJZGHY"
+		)
+
+		# Post Slack message
+		slack(message: "Lint project.", default_payloads: [])
+
+		# Swift code validation with lint
+		swiftlint(
+			mode: :lint,					# Default lint
+			config_file: ".swiftlint.yml",	# Lint config file
+			executable: "Pods/SwiftLint/swiftlint",	# Path to the lint executable
+			ignore_exit_status: false		# Fail if there are serious lint violations
+		)
+
+		# Report back on Slack
+		slack(message: "Build and Test finished, eveything looks great!")
+	end
+	
+	# Release on master
+	
+	desc "Deploy a new version to the App Store for the client"
+	desc "CI lane, changes the project's signing."
+	lane :release do
+		# Inform about start with detailed infos in payload
+		slack(
+			message: "Starting release deploy",
+			default_payloads: [:git_branch, :git_author, :last_git_commit_hash]
+		)
+
+		# Switch from automatic to manual signing
+		disable_automatic_code_signing(
+			code_sign_identity: "iPhone Distribution: Johannes Vegt (47M3HS62YX)",
+			profile_name: "Makula dist",
+			team_id: "47M3HS62YX"			
+		)
+
+		# Build the default target in release mode
+		gym(
+			scheme: "MakulaRelease",		# The scheme for release
+			clean: true,					# Clean project first
+			configuration: "Release",		# Build for release
+			silent: true,					# No details
+			skip_package_ipa: false,		# ipa necessary
+		)
+
+		# Upload app to App Store
+		deliver(
+			app_identifier: "com.appamedix.Makula", # Use the correct app identifier
+			username: "hvegt@mac.com",		# Log in as client
+			team_name: "Johannes Vegt",		# The client's team name
+			team_id: "47M3HS62YX",			# The team ID
+			force: true,					# Skip HTML report verification
+			skip_screenshots: true,			# Don't upload screenshots
+			skip_metadata: true				# Don't upload any metadata
+		)
+
+		# Reset all changes done for the manual signing
+		reset_git_repo(
+			force: true
+		)
+
+		# Add tag with version and build number
+		build_number = get_build_number
+		version_number = get_version_number(
+			target: "MakulaRelease"
+		)
+		add_git_tag(
+			tag: "CD/#{version_number}/#{build_number}"
+		)
+		#push_git_tags
+				
+		# Increment build version by one for the next release
+		increment_build_number
+		
+		# Commit new version number
+	    git_commit(
+	    	path: "*",
+		   	message: "Incremented build number [ci skip]"
+		)
+		
+		# Push repo inclusive tags
+	    push_to_git_remote
+
+		# Report back on Slack
+		slack(message: "Deploy finished!")
+	end
+
+	# Prepare and errors
+	
+	desc "Imports the signing certificate and provisioning profiles if needed"
+	lane :prepare do
+		cert 								# Get the certificate
+		sigh(
+			force: true						# Force renewing the provisioning profiles
+		)
+	end
+	
+	after_all do |lane|
+	end
+
+	error do |lane, exception|
+		# Report error on Slack
+		slack(
+			message: exception.message,
+			success: false
+		)
+	end
+end
+

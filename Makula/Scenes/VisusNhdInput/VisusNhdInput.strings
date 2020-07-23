@@ -1,0 +1,12 @@
+// The scene's localized text.
+
+// The scene's titles.
+"VisusTitle" = "Visus-Eingabe";
+"NHDTitle" = "NHD-Eingabe";
+
+// The confirm button title.
+"ConfirmButtonTitle" = "Speichern";
+
+// The cell titles.
+"CellTitleLeft" = "links";
+"CellTitleRight" = "rechts";

@@ -1,0 +1,10 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Kontakte";
+
+// The button's title in the cell.
+"DeleteButtonTitle" = "Löschen";
+
+// The placeholder for an unnamed, custom entry.
+"Unnamed" = "Name";

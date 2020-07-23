@@ -1,0 +1,11 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Erinnerung";
+
+// Cell title.
+"CheckboxTitle" = "Vor Terminen erinnern";
+
+// Picker text.
+"PickerHourValue" = "%d h";
+"PickerMinuteValue" = "%2d min";

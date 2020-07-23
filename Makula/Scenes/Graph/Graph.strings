@@ -1,0 +1,20 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "NH-Dicke/Visus";
+
+// The first cell showing the static text to hint which eye's data is shown.
+"HeaderCellLeftEye" = "links";
+"HeaderCellRightEye" = "rechts";
+
+// The second cell showing the selected date.
+"IvomDateCellTitle" = "IVOM";
+
+// Graph vertical axis titles.
+"GraphTitleLeft" = "NH-Dicke (µm)";
+"GraphTitleRight" = "Visus (dcml)";
+
+// Grap horizontal axis values.
+// The format of the day numbers.
+"GraphMonthNumberFormat" = "%02d";
+"GraphXAxisLabelFormat" = "%@.%@";

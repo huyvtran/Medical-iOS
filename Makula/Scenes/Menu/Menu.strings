@@ -1,0 +1,266 @@
+// The scene's localized text.
+
+// ------------------
+// MARK: - Home
+// ------------------
+
+// The scene's title.
+"HomeTitle" = "Makula-App";
+
+// The cell titles.
+"HomeCell0" = "Arztbesuch";
+"HomeCell1" = "Termine";
+"HomeCell2" = "Kalender";
+"HomeCell3" = "Kontakte";
+"HomeCell4" = "Selbsttests";
+"HomeCell5" = "Wissen";
+"HomeCell6" = "Adressverzeichnis";
+"HomeCell7" = "Aktuelles";
+"HomeCell8" = "Suchfunktion";
+"HomeCell9" = "Einstellungen";
+"HomeCell10" = "Impressum";
+"HomeCell11" = "Version %@ (%@)";
+"HomeCell12" = "Bedienung";
+
+// The speech text for the cells.
+"HomeCell0Speech" = "Arztbesuch";
+"HomeCell1Speech" = "Termine";
+"HomeCell2Speech" = "Kalender";
+"HomeCell3Speech" = "Kontakte";
+"HomeCell4Speech" = "Selbsttests";
+"HomeCell5Speech" = "Wissen";
+"HomeCell6Speech" = "Adressverzeichnis";
+"HomeCell7Speech" = "Aktuelles";
+"HomeCell8Speech" = "Suchfunktion";
+"HomeCell9Speech" = "Einstellungen";
+"HomeCell10Speech" = "Impressum";
+"HomeCell11Speech" = "Version %@ (%@)";
+"HomeCell12Speech" = "Bedienung";
+
+// --------------------------
+// MARK: - DoctorVisit
+// --------------------------
+
+// The scene's title.
+"DoctorVisitTitle" = "Arztbesuch";
+
+// The cell titles.
+"DoctorVisitCell0" = "Behandlung";
+"DoctorVisitCell1" = "Diagnose";
+"DoctorVisitCell2" = "Medikamente";
+"DoctorVisitCell3" = "Visus-Eingabe";
+"DoctorVisitCell4" = "NH-Dicke-Eingabe";
+"DoctorVisitCell5" = "Grafik NH-Dicke/Visus";
+
+// The speech text for the cells.
+"DoctorVisitCell0Speech" = "";
+"DoctorVisitCell1Speech" = "Diagnose";
+"DoctorVisitCell2Speech" = "Medikamente";
+"DoctorVisitCell3Speech" = "Visus Eingabe";
+"DoctorVisitCell4Speech" = "N H Dicke Eingabe";
+"DoctorVisitCell5Speech" = "Grafik N H Dicke Visus";
+
+// -----------------------
+// MARK: - SelfTest
+// -----------------------
+
+// The scene's title.
+"SelfTestTitle" = "Selbsttests";
+
+// The cell titles.
+"SelfTestCell0" = "Amslertest";
+"SelfTestCell1" = "Lesetest";
+
+// The speech text for the cells.
+"SelfTestCell0Speech" = "Amslertest";
+"SelfTestCell1Speech" = "Lesetest";
+
+// -----------------------
+// MARK: - Knowledge
+// -----------------------
+
+// The scene's title.
+"KnowledgeTitle" = "Wissen";
+
+// The cell titles.
+"KnowledgeCell1" = "Erkrankung";
+"KnowledgeCell2" = "Untersuchung";
+"KnowledgeCell3" = "Therapie";
+"KnowledgeCell4" = "Maßnahmen";
+"KnowledgeCell5" = "Hilfsmittel";
+"KnowledgeCell6" = "Unterstützung";
+"KnowledgeCell7" = "Diagnose";
+
+// The speech text for the cells.
+"KnowledgeCell1Speech" = "Erkrankung";
+"KnowledgeCell2Speech" = "Untersuchung";
+"KnowledgeCell3Speech" = "Therapie";
+"KnowledgeCell4Speech" = "Maßnahmen";
+"KnowledgeCell5Speech" = "Hilfsmittel";
+"KnowledgeCell6Speech" = "Unterstützung";
+"KnowledgeCell7Speech" = "Diagnose";
+
+// -----------------------
+// MARK: - Settings
+// -----------------------
+
+// The scene's title.
+"SettingsTitle" = "Einstellungen";
+
+// The cell titles.
+"SettingsCell0" = "Erinnerung";
+"SettingsCell1" = "Backup";
+
+// The speech text for the cells.
+"SettingsCell0Speech" = "Erinnerung";
+"SettingsCell1Speech" = "Backup";
+
+// -----------------------
+// MARK: - Illness
+// -----------------------
+
+// The scene's title.
+"IllnessTitle" = "Erkrankung";
+
+// The cell titles.
+"IllnessCell0" = "AMD";
+"IllnessCell1" = "Drusen";
+"IllnessCell2" = "Feuchte AMD";
+"IllnessCell3" = "Formen AMD";
+"IllnessCell4" = "Behandlung";
+"IllnessCell5" = "Makula";
+"IllnessCell6" = "Makulaödem";
+"IllnessCell7" = "Metamorphopsie";
+"IllnessCell8" = "Netzhaut";
+"IllnessCell9" = "Trockene AMD";
+
+// The speech text for the cells.
+"IllnessCell0Speech" = "A M D";
+"IllnessCell1Speech" = "Drusen";
+"IllnessCell2Speech" = "Feuchte A M D";
+"IllnessCell3Speech" = "Formen A M D";
+"IllnessCell4Speech" = "Behandlung";
+"IllnessCell5Speech" = "Makula";
+"IllnessCell6Speech" = "Makulaödem";
+"IllnessCell7Speech" = "Metamorphopsie";
+"IllnessCell8Speech" = "Netzhaut";
+"IllnessCell9Speech" = "Trockene A M D";
+
+// -----------------------
+// MARK: - Examination
+// -----------------------
+
+// The scene's title.
+"ExaminationTitle" = "Untersuchung";
+
+// The cell titles.
+"ExaminationCell0" = "Augenspiegelung";
+"ExaminationCell1" = "Fluoreszenzangiographie";
+"ExaminationCell2" = "Fundusfotografie";
+"ExaminationCell3" = "Netzhautdicke";
+"ExaminationCell4" = "OCT-Untersuchung";
+"ExaminationCell5" = "OCT-A";
+"ExaminationCell6" = "Visus";
+
+// The speech text for the cells.
+"ExaminationCell0Speech" = "Augenspiegelung";
+"ExaminationCell1Speech" = "Fluoreszenzangiographie";
+"ExaminationCell2Speech" = "Fundusfotografie";
+"ExaminationCell3Speech" = "Netzhautdicke";
+"ExaminationCell4Speech" = "O C T Untersuchung";
+"ExaminationCell5Speech" = "O C T A";
+"ExaminationCell6Speech" = "Visus";
+
+// -----------------------
+// MARK: - Therapy
+// -----------------------
+
+// The scene's title.
+"TherapyTitle" = "Therapie";
+
+// The cell titles.
+"TherapyCell0" = "Alternative Therapien";
+"TherapyCell1" = "IVOM-Therapie";
+"TherapyCell2" = "PRN-Schema";
+"TherapyCell3" = "Trockenen AMD";
+"TherapyCell4" = "Treat & Extend";
+"TherapyCell5" = "VEGF-Hemmer";
+
+// The speech text for the cells.
+"TherapyCell0Speech" = "Alternative Therapien";
+"TherapyCell1Speech" = "I V O M Therapie";
+"TherapyCell2Speech" = "P R N Schema";
+"TherapyCell3Speech" = "Trockenen A M D";
+"TherapyCell4Speech" = "Treat & Extend";
+"TherapyCell5Speech" = "V E G F Hemmer";
+
+// -----------------------
+// MARK: - Activities
+// -----------------------
+
+// The scene's title.
+"ActivitiesTitle" = "Maßnahmen";
+
+// The cell titles.
+"ActivitiesCell0" = "Amsler-Test";
+"ActivitiesCell1" = "Bewegung";
+"ActivitiesCell2" = "Ernährung";
+"ActivitiesCell3" = "Nahrungsergänzung";
+"ActivitiesCell4" = "Rauchen";
+"ActivitiesCell5" = "Reha-Maßnahmen";
+
+// The speech text for the cells.
+"ActivitiesCell0Speech" = "Amsler-Test";
+"ActivitiesCell1Speech" = "Bewegung";
+"ActivitiesCell2Speech" = "Ernährung";
+"ActivitiesCell3Speech" = "Nahrungsergänzung";
+"ActivitiesCell4Speech" = "Rauchen";
+"ActivitiesCell5Speech" = "Reha-Maßnahmen";
+
+// -----------------------
+// MARK: - Aid
+// -----------------------
+
+// The scene's title.
+"AidTitle" = "Hilfsmittel";
+
+// The cell titles.
+"AidCell0" = "Bildschirmlesegerät";
+"AidCell1" = "Hörbucherei";
+"AidCell2" = "Kantenfiltergläser";
+"AidCell3" = "Lupe";
+"AidCell4" = "Lupenbrille";
+"AidCell5" = "Smartphone";
+"AidCell6" = "Tablett-PC";
+"AidCell7" = "Alltagshilfen";
+
+// The speech text for the cells.
+"AidCell0Speech" = "Bildschirmlesegerät";
+"AidCell1Speech" = "Hörbucherei";
+"AidCell2Speech" = "Kantenfiltergläser";
+"AidCell3Speech" = "Lupe";
+"AidCell4Speech" = "Lupenbrille";
+"AidCell5Speech" = "Smartphone";
+"AidCell6Speech" = "Tablett P C";
+"AidCell7Speech" = "Alltagshilfen";
+
+// -----------------------
+// MARK: - Support
+// -----------------------
+
+// The scene's title.
+"SupportTitle" = "Unterstützung";
+
+// The cell titles.
+"SupportCell0" = "Blindengeld";
+"SupportCell1" = "Hotline-AMD";
+"SupportCell2" = "Krankenkasse";
+"SupportCell3" = "Schwerbehindertenausweis";
+"SupportCell4" = "Sehbehindertengeld";
+
+// The speech text for the cells.
+"SupportCell0Speech" = "Blindengeld";
+"SupportCell1Speech" = "Hotline A M D";
+"SupportCell2Speech" = "Krankenkasse";
+"SupportCell3Speech" = "Schwerbehindertenausweis";
+"SupportCell4Speech" = "Sehbehindertengeld";

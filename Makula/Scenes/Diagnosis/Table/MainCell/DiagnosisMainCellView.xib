@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="788"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVD-JS-Cah" customClass="DiagnosisMainCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="20" width="375" height="117"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibHighlight" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MwR-mh-P1E" customClass="DiagnosisMainCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="141" width="375" height="190"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="ibTitle" value="A very very long title which shouldn't fit into the provided place."/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQs-xL-gaw" customClass="DiagnosisMainCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="335" width="375" height="162"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnp-kV-cRg" customClass="DiagnosisMainCellView" customModule="Makula">
+                    <rect key="frame" x="0.0" y="501" width="375" height="117"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibHighlight" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cQs-xL-gaw" firstAttribute="leading" secondItem="QJU-gK-8Ow" secondAttribute="leading" id="2Vu-Oi-sqs"/>
+                <constraint firstItem="Pnp-kV-cRg" firstAttribute="trailing" secondItem="QJU-gK-8Ow" secondAttribute="trailing" id="5mX-Xa-Hj4"/>
+                <constraint firstItem="Pnp-kV-cRg" firstAttribute="top" secondItem="cQs-xL-gaw" secondAttribute="bottom" constant="4" id="90Q-Hf-Hit"/>
+                <constraint firstItem="zVD-JS-Cah" firstAttribute="trailing" secondItem="QJU-gK-8Ow" secondAttribute="trailing" id="GDH-Dx-RMe"/>
+                <constraint firstItem="cQs-xL-gaw" firstAttribute="top" secondItem="MwR-mh-P1E" secondAttribute="bottom" constant="4" id="WOo-da-fiW"/>
+                <constraint firstItem="MwR-mh-P1E" firstAttribute="leading" secondItem="QJU-gK-8Ow" secondAttribute="leading" id="cub-K4-TZl"/>
+                <constraint firstItem="zVD-JS-Cah" firstAttribute="leading" secondItem="QJU-gK-8Ow" secondAttribute="leading" id="edM-QT-slS"/>
+                <constraint firstItem="MwR-mh-P1E" firstAttribute="top" secondItem="zVD-JS-Cah" secondAttribute="bottom" constant="4" id="hPs-j2-ux4"/>
+                <constraint firstItem="Pnp-kV-cRg" firstAttribute="leading" secondItem="QJU-gK-8Ow" secondAttribute="leading" id="lI7-Hm-Dym"/>
+                <constraint firstItem="MwR-mh-P1E" firstAttribute="trailing" secondItem="QJU-gK-8Ow" secondAttribute="trailing" id="saF-LL-pg9"/>
+                <constraint firstItem="zVD-JS-Cah" firstAttribute="top" secondItem="QJU-gK-8Ow" secondAttribute="top" id="tCN-c4-spF"/>
+                <constraint firstItem="cQs-xL-gaw" firstAttribute="trailing" secondItem="QJU-gK-8Ow" secondAttribute="trailing" id="yMM-g1-P7D"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="QJU-gK-8Ow"/>
+            <point key="canvasLocation" x="-12.5" y="18"/>
+        </view>
+    </objects>
+</document>

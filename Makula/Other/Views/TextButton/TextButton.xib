@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="CIh-Oa-dzg">
+            <rect key="frame" x="0.0" y="0.0" width="519" height="721"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SMT-c3-ciu" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="8" y="28" width="10" height="208"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xx-5T-3lj" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="26" y="28" width="109.5" height="74.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASd-hk-Nhy" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="143.5" y="28" width="250" height="42"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibHighlighted" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CNG-33-dDC" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="8" y="311" width="250" height="42"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="ibTitle" value="Long text"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ibDefaultColor">
+                            <color key="value" red="0.98819613350000002" green="1" blue="0.023625839659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ibHighlightColor">
+                            <color key="value" red="0.8862745098" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQW-Tj-Gam" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="250" y="311" width="250" height="42"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ibDefaultColor">
+                            <color key="value" red="0.98819613350000002" green="1" blue="0.023625839659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ibHighlightColor">
+                            <color key="value" red="0.8862745098" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibHighlighted" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hxs-aF-08d" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="500" y="311" width="250" height="42"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ibDefaultColor">
+                            <color key="value" red="0.98819613350000002" green="1" blue="0.023625839659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ibHighlightColor">
+                            <color key="value" red="0.8862745098" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibSelected" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5hO-8r-gQ2" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="8" y="370.5" width="150" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="2hJ-9i-KRq"/>
+                        <constraint firstAttribute="width" constant="150" id="5zv-pY-yae"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KKA-ua-NRN" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="166" y="370.5" width="150" height="90"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="biR-fE-bl2"/>
+                        <constraint firstAttribute="height" constant="90" id="kva-Xe-8mJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ibAlignment">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B7F-fP-Uq5" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="8" y="473.5" width="150" height="83.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="4WZ-Wp-WIP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="ibTitle" value="Too long text"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aom-MU-9SF" customClass="TextButton" customModule="Makula" customModuleProvider="target">
+                    <rect key="frame" x="166" y="473.5" width="150" height="58"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="8ej-8g-8NM"/>
+                        <constraint firstAttribute="width" constant="150" id="ulH-2v-xcf"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="ibTitle" value="Too long text"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="HQW-Tj-Gam" firstAttribute="leading" secondItem="CNG-33-dDC" secondAttribute="trailing" constant="8" id="4Ya-oy-tIZ"/>
+                <constraint firstItem="CNG-33-dDC" firstAttribute="leading" secondItem="4dy-im-igI" secondAttribute="leading" constant="8" id="6A9-AJ-zUz"/>
+                <constraint firstItem="B7F-fP-Uq5" firstAttribute="top" secondItem="KKA-ua-NRN" secondAttribute="bottom" constant="13" id="7Zi-3n-8bh"/>
+                <constraint firstItem="5hO-8r-gQ2" firstAttribute="top" secondItem="CNG-33-dDC" secondAttribute="bottom" constant="17.5" id="B6z-lD-WYr"/>
+                <constraint firstItem="KKA-ua-NRN" firstAttribute="top" secondItem="5hO-8r-gQ2" secondAttribute="top" id="DZT-kL-Oqr"/>
+                <constraint firstItem="B7F-fP-Uq5" firstAttribute="leading" secondItem="4dy-im-igI" secondAttribute="leading" constant="8" id="LDB-pP-HJz"/>
+                <constraint firstItem="ASd-hk-Nhy" firstAttribute="leading" secondItem="6xx-5T-3lj" secondAttribute="trailing" constant="8" id="NZw-7K-IdD"/>
+                <constraint firstItem="hxs-aF-08d" firstAttribute="top" secondItem="CNG-33-dDC" secondAttribute="top" id="UIG-Fg-7fY"/>
+                <constraint firstItem="aom-MU-9SF" firstAttribute="leading" secondItem="B7F-fP-Uq5" secondAttribute="trailing" constant="8" id="V51-SQ-yDC"/>
+                <constraint firstItem="6xx-5T-3lj" firstAttribute="top" secondItem="SMT-c3-ciu" secondAttribute="top" id="VHc-ML-0QY"/>
+                <constraint firstItem="6xx-5T-3lj" firstAttribute="leading" secondItem="SMT-c3-ciu" secondAttribute="trailing" constant="8" id="VL0-0Q-bn7"/>
+                <constraint firstItem="SMT-c3-ciu" firstAttribute="top" secondItem="4dy-im-igI" secondAttribute="top" constant="8" id="cmo-XK-Qb9"/>
+                <constraint firstItem="5hO-8r-gQ2" firstAttribute="leading" secondItem="4dy-im-igI" secondAttribute="leading" constant="8" id="gXN-th-roO"/>
+                <constraint firstItem="aom-MU-9SF" firstAttribute="top" secondItem="B7F-fP-Uq5" secondAttribute="top" id="h8w-3d-SWV"/>
+                <constraint firstItem="hxs-aF-08d" firstAttribute="leading" secondItem="HQW-Tj-Gam" secondAttribute="trailing" constant="8" id="lIF-WM-Ojd"/>
+                <constraint firstItem="CNG-33-dDC" firstAttribute="top" secondItem="SMT-c3-ciu" secondAttribute="bottom" constant="75" id="n5Y-Wy-yxX"/>
+                <constraint firstItem="SMT-c3-ciu" firstAttribute="leading" secondItem="4dy-im-igI" secondAttribute="leading" constant="8" id="s89-xG-dQd"/>
+                <constraint firstItem="KKA-ua-NRN" firstAttribute="leading" secondItem="5hO-8r-gQ2" secondAttribute="trailing" constant="8" id="wCp-uI-97U"/>
+                <constraint firstItem="HQW-Tj-Gam" firstAttribute="top" secondItem="CNG-33-dDC" secondAttribute="top" id="xst-XR-tnb"/>
+                <constraint firstItem="ASd-hk-Nhy" firstAttribute="top" secondItem="SMT-c3-ciu" secondAttribute="top" id="yo3-UC-Sgo"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="4dy-im-igI"/>
+            <point key="canvasLocation" x="133.5" y="2.5"/>
+        </view>
+    </objects>
+</document>

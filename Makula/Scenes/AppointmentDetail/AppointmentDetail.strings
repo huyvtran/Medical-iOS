@@ -1,0 +1,34 @@
+// The scene's localized text.
+
+// The date format for the title.
+"Title" = "%@";
+"AppointmentTimeFormat" = "HH:mm";
+"AppointmentTime" = "%@ Uhr";
+
+// Delete alert.
+"DeleteAlertTitle" = "Eintrag löschen?";
+"DeleteAlertMessage" = "Wollen Sie wirklich alle Daten für diesen Tag löschen?";
+"DeleteAlertConfirm" = "Ja, löschen";
+"DeleteAlertCancel" = "Abbrechen";
+
+// The cell titles.
+"VisusModelCellTitle" = "Visus";
+"NhdModelCellTitle" = "OCT";
+"AmslertestModelCellTitle" = "Amslertest";
+"ReadingTestModelCellTitle" = "Lesetest";
+"MedicalAppointmentCellTitle" = "Arzttermin";
+"NoteCellTitle" = "Notizen";
+"DeleteCellTitle" = "Löschen";
+"SplitCellTitleLeft" = "links";
+"SplitCellTitleRight" = "rechts";
+
+// The cell titles for the speech synthesizer.
+"VisusModelCellTitleSpeech" = "Visus";
+"NhdModelCellTitleSpeech" = "O C T";
+"AmslertestModelCellTitleSpeech" = "Amslertest";
+"ReadingTestModelCellTitleSpeech" = "Lesetest";
+"MedicalAppointmentCellTitleSpeech" = "Arzttermin";
+"NoteCellTitleSpeech" = "Notizen";
+"DeleteCellTitleSpeech" = "Löschen";
+"SplitCellTitleLeftSpeech" = "links";
+"SplitCellTitleRightSpeech" = "rechts";

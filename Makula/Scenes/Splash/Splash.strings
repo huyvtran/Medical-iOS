@@ -1,0 +1,6 @@
+// The scene's localized text.
+
+// Database connection failure.
+"DatabaseTouchErrorTitle" = "Datenbank Fehler";
+"DatabaseTouchErrorMessage" = "Die Datenbank konnte nicht geöffnet werden. Bitte beenden Sie die App und versuchen Sie es erneut. Sollte es weiterhin nicht möglich sein auf die Datenbank zuzugreifen, dann wenden Sie sich bitte an den Support.";
+"DatabaseTouchErrorConfirmButton" = "Ok";

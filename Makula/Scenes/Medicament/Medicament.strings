@@ -1,0 +1,13 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Medikamente";
+
+// The special table cell titles.
+"CellMore" = "Weitere";
+
+// The cell title for the speech synthesizer.
+"CellMoreSpeech" = "Weitere";
+
+// The button's title in the cell.
+"DeleteButtonTitle" = "Löschen";

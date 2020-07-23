@@ -1,0 +1,13 @@
+// The scene's localized text.
+
+// The scene's title.
+"Title" = "DISCLAIMER";
+
+// The checkbox title.
+"CheckboxTitle" = "Ich stimme zu:";
+
+// The confirm button title.
+"ConfirmButtonTitle" = "Bestätigen";
+
+// The description
+"Description" = "Sehr geehrter/e Nutzer/-in, wir freuen uns, dass Sie die Makula-App einsetzen wollen. Sie bietet Hilfestellung für Patienten mit Makula-Erkrankungen. Ziel ist es, den Patienten in der Organisation seiner Erkrankung und im Zugang zu Informationen zu unterstützen. Die Makula-App ist hersteller- und produkteunabhängig. Die Entwicklung und Weiterentwicklung erfolgt in enger Abstimmung mit Ärzten und Betroffenen. Die Nutzung der Makula-App ersetzt nicht den Arzt-Patienten-Kontakt. Bei der Nutzung werden keine Diagnosen erstellt oder individuelle therapeutische Maßnahmen empfohlen. Bevor Sie die App zum ersten Mal nutzen möchten wir Sie bitten, dem Haftungsausschuss zuzustimmen.";

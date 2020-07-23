@@ -1,0 +1,44 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Kontakte";
+
+// The default cell titles.
+"NameCellTitle" = "Name";
+"MobileCellTitle" = "Mobil-Nr.";
+"PhoneCellTitle" = "Tel.-Nr.";
+"EmailCellTitle" = "E-Mail";
+"WebCellTitle" = "Webseite";
+"StreetCellTitle" = "Straße";
+"CityCellTitle" = "Stadt";
+
+// The cell titles as speech synthesizer text.
+"NameCellTitleSpeech" = "Name";
+"MobileCellTitleSpeech" = "Mobil Nummer";
+"PhoneCellTitleSpeech" = "Telefon Nummer";
+"EmailCellTitleSpeech" = "EMail";
+"WebCellTitleSpeech" = "Webseite";
+"StreetCellTitleSpeech" = "Straße";
+"CityCellTitleSpeech" = "Stadt";
+
+// The alert for the phone call.
+"PhoneCallAlertTitle" = "Anrufen";
+"PhoneCallAlertMessage" = "Wollen Sie wirklich die Nummer '%@' anrufen?";
+"PhoneCallConfirmButton" = "Ja, anrufen";
+"PhoneCallCancelButton" = "Abbrechen";
+
+// The alert for the email send.
+"EmailFailureTitle" = "Kein Email-Konto";
+"EmailFailureMessage" = "Mit diesem Gerät können derzeit leider keine Emails geschrieben werden. Stellen Sie bitte sicher, dass ein Email-Konto eingerichtet ist.";
+
+"SmsFailureTitle" = "SMS nicht möglich";
+"SmsFailureMessage" = "Die SMS Nummer konnte nicht an die SMS App übermittelt werden.";
+
+"PhoneFailureTitle" = "Keine Telefonnummer";
+"PhoneFailureMessage" = "Die Telefonnummer konnte nicht gewählt werden.";
+
+"WebFailureTitle" = "Web-Adresse fehlerhaft";
+"WebFailureMessage" = "Die angegebene Web-Adresse lässt sich leider nicht in eine gültige URL umwandeln.";
+
+// The button's title in the cell.
+"DeleteButtonTitle" = "Löschen";

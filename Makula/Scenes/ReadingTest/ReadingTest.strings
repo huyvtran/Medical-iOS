@@ -1,0 +1,14 @@
+// The scene's localized text.
+
+// The scene's title in the header view.
+"Title" = "Lesetest";
+
+// The cell titles and contents.
+"SplitCellTitleLeft" = "links";
+"SplitCellTitleRight" = "rechts";
+"TextCellContentBig" = "6. Sonntags anderen zu";
+"TextCellContentLarge" = "5. macht ich mich hübsch und";
+"TextCellContentMedium" = "4. den Frack voll er Pflaumen. Hell schien";
+"TextCellContentSmall" = "3. vom Feld in die Wiesen dämelt ich glücklich dahin. Schmetterlinge flogen in";
+"TextCellContentLittle" = "2. Menge. Von Zeit zu Zeit erhascht ich ein einen, besah ihn und lieb ihn fliegen, denn von der gewöhnlichen Sorte hatt ich läng st alle Kasten voll. Aber jetzt, in der Ferne,";
+"TextCellContentTiny" = "1. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";

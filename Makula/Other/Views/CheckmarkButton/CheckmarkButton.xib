@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="329"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4a8-Tt-y1A" customClass="CheckmarkButton" customModule="Makula">
+                    <rect key="frame" x="0.0" y="0.0" width="56" height="70"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibChecked" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ac2-Cy-xit" customClass="CheckmarkButton" customModule="Makula">
+                    <rect key="frame" x="66" y="0.0" width="56" height="70"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibChecked" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vjj-sp-Dvf" customClass="CheckmarkButton" customModule="Makula">
+                    <rect key="frame" x="132" y="0.0" width="99.5" height="124.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibChecked" value="YES"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBp-gI-MsZ" customClass="CheckmarkButton" customModule="Makula">
+                    <rect key="frame" x="241.5" y="0.0" width="100" height="124.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibChecked" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="ibLargeStyle" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NBp-gI-MsZ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3Vy-bL-44U"/>
+                <constraint firstItem="Vjj-sp-Dvf" firstAttribute="leading" secondItem="ac2-Cy-xit" secondAttribute="trailing" constant="10" id="3Z7-co-Jib"/>
+                <constraint firstItem="Vjj-sp-Dvf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="703-a3-i6E"/>
+                <constraint firstItem="4a8-Tt-y1A" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Ecz-EZ-gk4"/>
+                <constraint firstItem="ac2-Cy-xit" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="NcI-Tb-NwK"/>
+                <constraint firstItem="NBp-gI-MsZ" firstAttribute="leading" secondItem="Vjj-sp-Dvf" secondAttribute="trailing" constant="10" id="SMz-6d-KiI"/>
+                <constraint firstItem="ac2-Cy-xit" firstAttribute="leading" secondItem="4a8-Tt-y1A" secondAttribute="trailing" constant="10" id="bZf-5t-e5K"/>
+                <constraint firstItem="4a8-Tt-y1A" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dXh-xU-HXj"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="44.5" y="-127.5"/>
+        </view>
+    </objects>
+</document>

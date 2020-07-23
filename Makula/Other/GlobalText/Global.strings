@@ -1,0 +1,89 @@
+// Localized text used globally scene independent
+
+// MARK: - Error messages
+
+"DatabaseWriteErrorTitle" = "Datenbank-Fehler";
+"DatabaseWriteErrorMessage" = "Es ist ein Fehler beim Speichern in die Datenbank aufgetreten.";
+"DatabaseWriteErrorCancelButton" = "Ok";
+
+"DefaultErrorConfirmButton" = "Ok";
+
+// MARK: - Speech recognizer
+
+// A connection string added inbetween two split cell entries.
+"SpeechSplitConnector" = ", ";
+
+// MARK: - Default database entries
+
+// The default medicament titles.
+"MedicamentEntryAvastin" = "Avastin®";
+"MedicamentEntryEylea" = "Eylea®";
+"MedicamentEntryLucentis" = "Lucentis®";
+"MedicamentEntryOzurdex" = "Ozurdex®";
+"MedicamentEntryIluvien" = "Iluvien®";
+
+// MARK: - Appointments
+
+// Appointment titles.
+"AppointmentTreatment" = "Behandlung";
+"AppointmentAftercare" = "Nachsorge";
+"AppointmentOctCheck" = "OCT-Kontrolle";
+"AppointmentOther" = "Sonstige";
+
+// The speech text for the appointment titles.
+"AppointmentTreatmentSpeech" = "Behandlung";
+"AppointmentAftercareSpeech" = "Nachsorge";
+"AppointmentOctCheckSpeech" = "O C T Kontrolle";
+"AppointmentOtherSpeech" = "Sonstige";
+
+// MARK: - Contacts
+
+// Default contact titles.
+"ContactTreatment" = "Behandlung";
+"ContactAftercare" = "Nachsorge";
+"ContactOctCheck" = "OCT-Kontrolle";
+"ContactAmdNetwork" = "AMD-Netz e.V.";
+
+// Default contact titles for the speech synthesizer.
+"ContactTreatmentSpeech" = "Behandlung";
+"ContactAftercareSpeech" = "Nachsorge";
+"ContactOctCheckSpeech" = "O C T Kontrolle";
+"ContactAmdNetworkSpeech" = "A M D Netz e.V.";
+
+// MARK: - Amslertest progress
+
+// The progress type titles.
+"AmslertestProgressEqual" = "gleich";
+"AmslertestProgressBetter" = "besser";
+"AmslertestProgressWorse" = "schlechter";
+
+// The progress type titles for the speech synthesizer.
+"AmslertestProgressEqualSpeech" = "gleich";
+"AmslertestProgressBetterSpeech" = "besser";
+"AmslertestProgressWorseSpeech" = "schlechter";
+
+// MARK: - Types
+
+// Visus / NHD type.
+"VisusOutput" = "%@ dcml";
+"NhdOutput" = "%@ µm";
+"VisusOutputNoValue" = "-.-- dcml";
+"NhdOutputNoValue" = "--- µm";
+
+// Date formatting.
+"CommonDateFormat" = "dd.MM.yy";
+"CommonTimeFormat" = "HH:mm";
+"CommonDateWithWeekdayFormat" = "%@ %@";
+
+"CommonDateWeekdaySu" = "So";
+"CommonDateWeekdayMo" = "Mo";
+"CommonDateWeekdayTu" = "Di";
+"CommonDateWeekdayWe" = "Mi";
+"CommonDateWeekdayTh" = "Do";
+"CommonDateWeekdayFr" = "Fr";
+"CommonDateWeekdaySa" = "Sa";
+
+// MARK: - Notifications
+
+// Reminder
+"LocalNotificationMessage" = "Termin um %@ Uhr";
